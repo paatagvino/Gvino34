@@ -1,0 +1,98 @@
+﻿@page
+@model MovieDB.Web.Pages.Movies.IndexModel
+
+@{
+    ViewData["Title"] = "Movie Collection";
+}
+
+<div class="cinema-page">
+
+    <div class="cinema-header">
+        <span class="cinema-label">WELCOME TO</span>
+
+        <h1>
+            MOVIE<span>DB</span>
+        </h1>
+
+        <p>Discover your next favorite movie</p>
+
+        <div class="header-decoration"></div>
+    </div>
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">EXPLORE</span>
+                <h2>Our Movie Collection</h2>
+            </div>
+
+            <span class="movie-count">
+                @Model.Movies.Count Movies
+            </span>
+        </div>
+
+        @if (Model.Movies.Any())
+        {
+            <div class="row">
+
+                @foreach (var movie in Model.Movies)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+
+                        <div class="card movie-card h-100">
+
+                            <div class="movie-card-top">
+                                <span class="movie-year">
+                                    @movie.ReleaseYear
+                                </span>
+
+                                <span class="movie-icon">🎬</span>
+                            </div>
+
+                            <div class="card-body">
+
+                                <h3 class="movie-title">
+                                    <a asp-page="./Details"
+                                       asp-route-id="@movie.Id"
+                                       class="movie-title-link">
+                                        @movie.Title
+                                    </a>
+                                </h3>
+
+                                <div class="movie-divider"></div>
+
+                                <p>
+                                    <span>STUDIO</span>
+                                    @(movie.Studio?.Name ?? "Unknown")
+                                </p>
+
+                                <p>
+                                    <span>ACTORS</span>
+                                    @movie.Actors.Count
+                                </p>
+
+                                <a asp-page="./Details"
+                                   asp-route-id="@movie.Id"
+                                   class="movie-button">
+                                    VIEW DETAILS
+                                    <span>→</span>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        }
+        else
+        {
+            <div class="empty-movies">
+                No movies found in the database.
+            </div>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,71 @@
+﻿@page "{id:int}"
+@model MovieDB.Web.Pages.Movies.DetailsModel
+
+@{
+    ViewData["Title"] = "Movie Details";
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow-lg movie-details-card">
+
+        <div class="card-header bg-primary text-white">
+            <h2 class="mb-0">🎬 Movie Details</h2>
+        </div>
+
+        <div class="card-body">
+
+            <h3 class="movie-heading mb-4">
+                @Model.Movie.Title
+            </h3>
+
+            <hr />
+
+            <p>
+                <strong>Movie ID:</strong>
+                @Model.Movie.Id
+            </p>
+
+            <p>
+                <strong>Release Year:</strong>
+                @Model.Movie.ReleaseYear
+            </p>
+
+            <p>
+                <strong>Studio:</strong>
+                @(Model.Movie.Studio?.Name ?? "Unknown")
+            </p>
+
+            <p>
+                <strong>Country:</strong>
+                @(Model.Movie.Studio?.Country?.Name ?? "Unknown")
+            </p>
+
+            <hr />
+
+            <h5 class="mb-3">Actors</h5>
+
+            @if (Model.Movie.Actors.Any())
+            {
+                <ul class="list-group mb-4">
+                    @foreach (var actor in Model.Movie.Actors)
+                    {
+                        <li class="list-group-item">
+                            @actor.FirstName @actor.LastName
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p class="text-muted">No actors found.</p>
+            }
+
+            <a asp-page="./Index" class="btn btn-secondary">
+                ← Back to Movies
+            </a>
+
+        </div>
+    </div>
+
+</div>

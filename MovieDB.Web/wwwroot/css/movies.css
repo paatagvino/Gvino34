@@ -1,0 +1,329 @@
+﻿css
+/* ==============================
+   GENERAL CINEMA THEME
+============================== */
+body {
+    background-color: #0b0f19;
+    color: #e8e8e8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==============================
+   MAIN PAGE
+============================== */
+
+.cinema-page {
+    min-height: 100vh;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.cinema-header {
+    text-align: center;
+    padding: 75px 20px 65px;
+    background: linear-gradient(135deg, #172033, #080c15);
+    border-bottom: 1px solid #343b49;
+}
+
+.cinema-label {
+    color: #d4af37;
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.cinema-header h1 {
+    color: #ffffff;
+    font-size: 58px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-top: 15px;
+}
+
+    .cinema-header h1 span {
+        color: #d4af37;
+    }
+
+.cinema-header p {
+    color: #aab2c0;
+    font-size: 18px;
+    margin-top: 12px;
+}
+
+.header-decoration {
+    width: 75px;
+    height: 3px;
+    background: #d4af37;
+    margin: 25px auto 0;
+    border-radius: 5px;
+}
+
+/* ==============================
+   SECTION HEADING
+============================== */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 55px 0 35px;
+}
+
+.section-label {
+    color: #d4af37;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.movie-count {
+    color: #d4af37;
+    border: 1px solid #8c742e;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+/* ==============================
+   MOVIE CARDS
+============================== */
+
+.movie-card {
+    background: #171e2c;
+    border: 1px solid #30394a;
+    border-radius: 14px;
+    overflow: hidden;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+    .movie-card:hover {
+        transform: translateY(-8px);
+        border-color: #d4af37;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+.movie-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 22px;
+    background: #202a3b;
+    border-bottom: 1px solid #30394a;
+}
+
+.movie-year {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.movie-icon {
+    font-size: 25px;
+}
+
+.movie-card .card-body {
+    padding: 25px;
+}
+
+.movie-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    min-height: 55px;
+}
+
+.movie-divider {
+    height: 1px;
+    background: #343e50;
+    margin: 18px 0;
+}
+
+.movie-card p {
+    color: #c1c8d3;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+    .movie-card p span {
+        display: block;
+        color: #d4af37;
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+/* ==============================
+   DETAILS BUTTON
+============================== */
+
+.movie-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding: 12px 18px;
+    background: #d4af37;
+    color: #111827;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+    .movie-button:hover {
+        background: #f0cf62;
+        color: #000000;
+    }
+
+    .movie-button span {
+        font-size: 20px;
+    }
+
+/* ==============================
+   EMPTY MOVIES MESSAGE
+============================== */
+
+.empty-movies {
+    text-align: center;
+    padding: 35px;
+    background: #171e2c;
+    border: 1px solid #30394a;
+    border-radius: 12px;
+    color: #d4af37;
+}
+
+/* ==============================
+   MOVIE DETAILS PAGE
+============================== */
+
+.movie-details-card {
+    background: #171e2c;
+    color: #ffffff;
+    border: 1px solid #343e50;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+    .movie-details-card .card-header {
+        background: #202a3b !important;
+        color: #d4af37 !important;
+        border-bottom: 1px solid #343e50;
+        padding: 20px 30px;
+    }
+
+    .movie-details-card .card-body {
+        padding: 30px;
+    }
+
+    .movie-details-card .movie-heading {
+        color: #d4af37;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .movie-details-card p {
+        color: #d4d9e2;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .movie-details-card strong {
+        color: #d4af37;
+    }
+
+    .movie-details-card hr {
+        border-color: #465064;
+    }
+
+    .movie-details-card h5 {
+        color: #d4af37;
+    }
+
+    .movie-details-card .list-group-item {
+        background: #202a3b;
+        color: #ffffff;
+        border-color: #343e50;
+        padding: 12px 18px;
+    }
+
+    .movie-details-card .btn-secondary {
+        background: #d4af37;
+        color: #111827;
+        border: none;
+        font-weight: bold;
+    }
+
+        .movie-details-card .btn-secondary:hover {
+            background: #f0cf62;
+        }
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 768px) {
+
+    .cinema-header {
+        padding: 50px 15px;
+    }
+
+        .cinema-header h1 {
+            font-size: 42px;
+        }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+        .section-heading h2 {
+            font-size: 23px;
+        }
+
+    .movie-count {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .cinema-header h1 {
+        font-size: 34px;
+    }
+
+    .section-heading {
+        flex-direction: column;
+    }
+
+    .movie-details-card .card-body {
+        padding: 18px;
+    }
+}
+
+
+
+.movie-title-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.movie-title-link:hover {
+    color: #d4af37;
+}
